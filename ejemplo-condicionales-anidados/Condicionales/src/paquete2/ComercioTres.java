@@ -1,17 +1,20 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+// Existe una modificacion en el proceso de la problematica. El porcentaje del descuento del seguro sera infresado por teclado. Considerar los valores
+posibles a ingresar son entre 1 y 15, si la persona ingresa un valor fuera de este rango, el valor del porcentaje va ser 10.
  */
 package paquete2;
 
 import java.util.Locale;
 import java.util.Scanner;
+import static javax.management.Query.and;
 
 /**
  *
  * @author reroes
  */
-public class Comercio {
+public class ComercioTres {
     
     public static void main(String[] args) {
         
@@ -29,7 +32,7 @@ public class Comercio {
         double bono  = 0;
         
         double porcentajeSeguro = 8;
-        double adicionalSeguro;
+        double adicionalSeguro = 0;
         
         double sueldoFinal; 
         
@@ -48,6 +51,12 @@ public class Comercio {
         System.out.println("Ingrese el número de productos vendidos "
                 + "por favor");
         numeroProductos = entrada.nextInt();
+        
+        System.out.println("Ingrese el porcentaje del seguro" + "por favor");
+        porcentajeSeguro = entrada.nextInt();
+        
+        if (porcentajeSeguro > 1 && porcentajeSeguro < 15) ;
+        
         
         // calcular la productividad
         productividad = numeroProductos * coeficiente;
@@ -69,7 +78,8 @@ public class Comercio {
         }
         
        
-        adicionalSeguro = (sueldoBasico * porcentajeSeguro)/100;
+           adicionalSeguro = (sueldoBasico * porcentajeSeguro)/100;
+        }
         sueldoFinal = adicionalSeguro + bono + sueldoBasico;
         
         System.out.printf("Reporte de Empleado EL GRAN COMERCIO\n\n"
