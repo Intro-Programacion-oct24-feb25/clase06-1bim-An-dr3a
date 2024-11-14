@@ -30,20 +30,21 @@ public class Ejemplo021 {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
-        
+         
         int diaNacimiento;
         int mesNacimiento;
         int yearNacimiento;
 
         System.out.println("Ingrese el dia de su nacimiento");
-        int diaNacimiento = entrada.nextInt();
+        diaNacimiento = entrada.nextInt();
         
         System.out.println("Ingrese el mes de su nacimiento");
-        int mesNacimiento = entrada.nextInt();
+        mesNacimiento = entrada.nextInt();
         
         System.out.println("Ingrese el year de su nacimiento");
-        int yearNacimiento = entrada.nextInt();
-
+        yearNacimiento = entrada.nextInt();
+        
+        String mesCadena = "";
 
         switch (mesNacimiento) {
             case 1:
@@ -94,10 +95,13 @@ public class Ejemplo021 {
                 break;    
                 
             default:
-                System.out.printf("Usted a nacido el %d de %s de %d");
-                break;
+                System.out.printf("Opcion Incorrecta");
+                break;    
                 
         }
 
+        System.out.printf("Usted a nacido el %d de %s de %d",
+                        diaNacimiento, mesCadena.toUpperCase(),yearNacimiento);
+        
     }
 }
