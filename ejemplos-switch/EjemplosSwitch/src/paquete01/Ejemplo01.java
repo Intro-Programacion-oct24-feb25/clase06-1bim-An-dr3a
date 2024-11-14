@@ -33,9 +33,24 @@ public class Ejemplo01 {
                 System.out.printf("%s", cadena);
                 break;
             
+            case "Miercoles":
+            case "MIERCOLES":
+                System.out.printf("%s", cadena);
+                break;
+                
+            case "Jueves":
+            case "JUEVES":
+                System.out.printf("%s", cadena);
+                break;
+            
             case "Viernes":
             case "VIERNES":
             case "viernes":
+                System.out.printf("%s", cadena);
+                break;
+                
+            case "Sabado":
+            case "SABADO":
                 System.out.printf("%s", cadena);
                 break;
             
